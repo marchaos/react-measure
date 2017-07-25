@@ -1,6 +1,6 @@
 {
   "name": "react-measure",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Compute measurements of React components.",
   "main": "lib/react-measure.js",
   "files": [
@@ -43,7 +43,7 @@
   "dependencies": {
     "get-node-dimensions": "^1.2.0",
     "prop-types": "^15.5.10",
-    "resize-observer-polyfill": "https://github.com/marchaos/resize-observer-polyfill"
+    "resize-observer-polyfill": "^1.4.3"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
