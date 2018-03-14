@@ -33,6 +33,15 @@ function withContentRect(types) {
         this._resizeObserver = new ResizeObserver(this.measure)
       }
 
+      componentDidMount() {
+          if (this._node) {
+              const rect = this._node.getBoundingClientRect();
+              if (rect) {
+                  this.props.onResize({ bounds: rect });
+              }
+          }
+      }
+
       measure = entries => {
         const contentRect = getContentRect(
           this._node,
@@ -55,7 +64,7 @@ function withContentRect(types) {
           if (node) {
             this._resizeObserver.observe(node)
           } else {
-            this._resizeObserver.disconnect(this._node)
+              this._resizeObserver.disconnect(this._node)
           }
         }
         this._node = node
